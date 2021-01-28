@@ -3,7 +3,9 @@ pipeline {
         timeout(time: 30, unit: 'MINUTES')
     }
     agent{
-        label 'master'
+        node{
+            label 'master'
+        }
     }
     environment{
         NAME=YPYP
